@@ -84,12 +84,14 @@ public class Player : Token
 
 		bool bTouch = false;
 
+		// タッチを検出
 		foreach (var touch in Input.touches) {
 			if (touch.phase == TouchPhase.Began) {
 				Debug.Log( "touch" );
 				bTouch = true;
 			}
 		}
+		// 左クリックを検出
 		if ( Input.GetMouseButtonDown(0) ) {
 			bTouch = true;
 		}
@@ -140,7 +142,7 @@ public class Player : Token
 //				Debug.Log( circleCollider.ToString() );
 				circleCollider.enabled = false;
 			}
-			
+
 			BoxCollider2D[] boxColliderArray = GetComponents<BoxCollider2D> ();
 			foreach (var boxCollider in boxColliderArray) {
 //				Debug.Log( boxCollider.ToString() );
@@ -154,7 +156,7 @@ public class Player : Token
 //				Debug.Log( circleCollider.ToString() );
 				circleCollider.enabled = true;
 			}
-			
+
 			BoxCollider2D[] boxColliderArray = GetComponents<BoxCollider2D> ();
 			foreach (var boxCollider in boxColliderArray) {
 //				Debug.Log( boxCollider.ToString() );
