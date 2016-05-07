@@ -39,7 +39,6 @@ public class Player : Token
 		Jump	// ジャンプ
 	}
 
-	// 状態
 	eState _state = eState.Idle;
 
 	// アニメーションタイマー
